@@ -1,0 +1,16 @@
+html {
+    background-color: antiquewhite;
+}
+
+.heading-text {
+    text-align: center;
+}
+
+.gif-and-image-bank {
+    width: 700px;
+    border: 1px solid black;
+}
+
+.totoro-gif {
+    width: 700px;
+}

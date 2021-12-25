@@ -8,7 +8,9 @@ html {
 
 .gif-and-image-bank {
     width: 700px;
-    border: 1px solid black;
+    border: 1px solid black;   
+    margin: auto;
+
 }
 
 .container {
@@ -22,44 +24,88 @@ html {
 
 .ponyo-gif {
     width: 700px;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .howls-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .spiritedaway-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .princessmono-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .kikis-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .castleinthesky-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .graveoffireflies-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .onlyyesterday-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .whisperheart-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .thewindrises-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .thecatreturns-gif {
     width: 700px;
+    position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -10,7 +10,10 @@ html {
     width: 700px;
     border: 1px solid black;   
     margin: auto;
+}
 
+#clock {
+    font-size: 30px;
 }
 
 .container {

@@ -10,7 +10,8 @@
     <title>My Ghibli Clock</title>
 
 </head>
-<body onload="startTime()">
+<body onload="startTime(), gifsAndTime();
+audioAndTime();">
     <h1 class="heading-text">&#9734; MY-GHIBLI-CLOCK &#9734;</h1>
     <div id="clock"></div>
     <br />
@@ -30,19 +31,20 @@
                 <img src="gif-files/the-cat-returns.gif" id="slidedeck" class="thecatreturns-gif"/>
           </div>
     </div>
-    <audio id="audio" loop src="audio-files/10 - totoro.mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/06 - Ponyo and Sosuke.mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/03 sky stroll.mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/10 ano hi no kawa (spirited away).mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/05 Eto (Land Of The Impure).mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/03 a town with an ocean view (kiki's delivery service).mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/01 - the girl who fell from the sky.mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/02 Drama Genki Ni Naresou.mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/01 Le Temps Des Cerises.mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/01 - oka no machi.mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/01 A Journey (A Dream of Flight).mp3" autoplay></audio>
-    <audio id="audio" loop src="audio-files/04 Sora Iro No Tane.mp3" autoplay></audio>
-    
+    <div class="audio-bank">
+    <audio id="audioclip" loop src="audio-files/10 - totoro.mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/06 - Ponyo and Sosuke.mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/03 sky stroll.mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/10 ano hi no kawa (spirited away).mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/05 Eto (Land Of The Impure).mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/03 a town with an ocean view (kiki's delivery service).mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/01 - the girl who fell from the sky.mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/02 Drama Genki Ni Naresou.mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/01 Le Temps Des Cerises.mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/01 - oka no machi.mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/01 A Journey (A Dream of Flight).mp3" autoplay></audio>
+    <audio id="audioclip" loop src="audio-files/04 Sora Iro No Tane.mp3" autoplay></audio>
+    </div>
 
     <script src="app.js"></script>
 </body>

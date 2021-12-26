@@ -45,16 +45,24 @@ function changeGif() {
     }
 }
 
+    let totoroAudio = document.getElementById("totoro-audio");
+    let ponyoAudio = document.getElementById("ponyo-audio");
+    let whisperOfTheHeart = document.getElementById("whisperoftheheart-audio");
+    let windRisesAudio = document.getElementById("thewindrises-audio");
+    let catReturnsAudio = document.getElementById("");
 
 function gifsAndTime() {
     let todayDate = new Date();
     let hour = todayDate.getHours();
+    
 
     if(hour <= 1) {
         gifSlides.setAttribute("src", gifArray[0]);
+        totoroAudio.play();
     }
     else if(hour <= 2) {
         gifSlides.setAttribute("src", gifArray[1]);
+        ponyoAudio.play();
     }
     else if(hour <= 3) {
         gifSlides.setAttribute("src", gifArray[2]);
@@ -79,14 +87,15 @@ function gifsAndTime() {
     }
     else if(hour <= 10) {
         gifSlides.setAttribute("src", gifArray[9]);
-        document.getElementById("whisperoftheheart-audio").play();
+        whisperOfTheHeart.play();
     }
     else if(hour <= 11) {
         gifSlides.setAttribute("src", gifArray[10]);
-        document.getElementById("thewindrises-audio").play();
+        windRisesAudio.play();
     }
     else if(hour <= 12) {
         gifSlides.setAttribute("src", gifArray[11]);
+        catReturnsAudio.play();
     }
     else {
         let intervalHandle = setInterval(changeGif, 3000)

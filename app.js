@@ -47,14 +47,20 @@ function changeGif() {
 
     let totoroAudio = document.getElementById("totoro-audio");
     let ponyoAudio = document.getElementById("ponyo-audio");
+    let howlsAudio = document.getElementById("howlsmovingcastle-audio");
+    let spiritedAwayAudio = document.getElementById("spiritedaway-audio");
+    let princessMonoAudio = document.getElementById("princessmono-audio");
+    let kikiDeliveryAudio = document.getElementById("kikisdelivery-audio");
+    let castleInTheSkyAudio = document.getElementById("castleinthesky-audio");
+    let graveOfFirefliesAudio = document.getElementById("graveoffireflies-audio");
+    let onlyYesterdayAudio = document.getElementById("onlyyesterday-audio");
     let whisperOfTheHeart = document.getElementById("whisperoftheheart-audio");
     let windRisesAudio = document.getElementById("thewindrises-audio");
-    let catReturnsAudio = document.getElementById("");
+    let catReturnsAudio = document.getElementById("thecatreturns-audio");
 
 function gifsAndTime() {
     let todayDate = new Date();
     let hour = todayDate.getHours();
-    
 
     if(hour <= 1) {
         gifSlides.setAttribute("src", gifArray[0]);
@@ -66,24 +72,31 @@ function gifsAndTime() {
     }
     else if(hour <= 3) {
         gifSlides.setAttribute("src", gifArray[2]);
+        howlsAudio.play();
     }
     else if(hour <= 4) {
         gifSlides.setAttribute("src", gifArray[3]);
+        spiritedAwayAudio.play();
     }
     else if(hour <= 5) {
         gifSlides.setAttribute("src", gifArray[4]);
+        princessMonoAudio.play();
     }
     else if(hour <= 6) {
         gifSlides.setAttribute("src", gifArray[5]);
+        kikiDeliveryAudio.play();
     }
     else if(hour <= 7) {
         gifSlides.setAttribute("src", gifArray[6]);
+        castleInTheSkyAudio.play();
     }
     else if(hour <= 8) {
         gifSlides.setAttribute("src", gifArray[7]);
+        graveOfFirefliesAudio.play();
     }
     else if(hour <= 9) {
         gifSlides.setAttribute("src", gifArray[8]);
+        onlyYesterdayAudio.play();
     }
     else if(hour <= 10) {
         gifSlides.setAttribute("src", gifArray[9]);

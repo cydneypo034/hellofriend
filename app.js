@@ -45,45 +45,47 @@ function changeGif() {
     }
 }
 
+
 function gifsAndTime() {
     let todayDate = new Date();
     let hour = todayDate.getHours();
 
     if(hour <= 1) {
-        gifSlides.setAttribute("src", gifArray[0])
+        gifSlides.setAttribute("src", gifArray[0]);
     }
     else if(hour <= 2) {
         gifSlides.setAttribute("src", gifArray[1]);
     }
     else if(hour <= 3) {
-        gifSlides.setAttribute("src", gifArray[2])
+        gifSlides.setAttribute("src", gifArray[2]);
     }
     else if(hour <= 4) {
-        gifSlides.setAttribute("src", gifArray[3])
+        gifSlides.setAttribute("src", gifArray[3]);
     }
     else if(hour <= 5) {
-        gifSlides.setAttribute("src", gifArray[4])
+        gifSlides.setAttribute("src", gifArray[4]);
     }
     else if(hour <= 6) {
-        gifSlides.setAttribute("src", gifArray[5])
+        gifSlides.setAttribute("src", gifArray[5]);
     }
     else if(hour <= 7) {
-        gifSlides.setAttribute("src", gifArray[6])
+        gifSlides.setAttribute("src", gifArray[6]);
     }
     else if(hour <= 8) {
-        gifSlides.setAttribute("src", gifArray[7])
+        gifSlides.setAttribute("src", gifArray[7]);
     }
     else if(hour <= 9) {
-        gifSlides.setAttribute("src", gifArray[8])
+        gifSlides.setAttribute("src", gifArray[8]);
     }
     else if(hour <= 10) {
-        gifSlides.setAttribute("src", gifArray[9])
+        gifSlides.setAttribute("src", gifArray[9]);
+        document.getElementById("whisperoftheheart-audio").play();
     }
     else if(hour <= 11) {
-        gifSlides.setAttribute("src", gifArray[10])
+        gifSlides.setAttribute("src", gifArray[10]);
     }
     else if(hour <= 12) {
-        gifSlides.setAttribute("src", gifArray[11])
+        gifSlides.setAttribute("src", gifArray[11]);
     }
     else {
         let intervalHandle = setInterval(changeGif, 3000)

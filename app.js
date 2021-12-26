@@ -83,6 +83,7 @@ function gifsAndTime() {
     }
     else if(hour <= 11) {
         gifSlides.setAttribute("src", gifArray[10]);
+        document.getElementById("thewindrises-audio").play();
     }
     else if(hour <= 12) {
         gifSlides.setAttribute("src", gifArray[11]);

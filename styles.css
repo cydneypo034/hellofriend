@@ -49,3 +49,10 @@ html {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+.instruction-text{
+  text-align: center;
+  font-size: 12px; 
+}
+

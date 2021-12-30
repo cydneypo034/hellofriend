@@ -58,35 +58,25 @@ function showSlideDeck(n) {
     setTimeout(showSlideDeck, 3000)
 }
 
-var oka = new Audio("audio-files/01 - oka no machi.mp3");
-var girlsky = new Audio("audio-files/01 - the girl who fell from the sky.mp3")
-var aJourney = new Audio ("audio-files/01 A Journey (A Dream of Flight).mp3")
-var leTemps = new Audio("audio-files/01 Le Temps Des Cerises.mp3")
-var genki = new Audio("audio-files/02 Drama Genki Ni Naresou.mp3")
-var kiki = new Audio("audio-files/03 a town with an ocean view (kiki's delivery service).mp3")
-var howls = new Audio("audio-files/03 sky stroll.mp3")
-var sora = new Audio("audio-files/04 Sora Iro No Tane.mp3")
-var eto = new Audio("audio-files/05 Eto (Land Of The Impure).mp3") 
-var ponyo = new Audio("audio-files/06 - Ponyo and Sosuke.mp3")
-var totoro = new Audio("audio-files/10 - totoro.mp3")
-var spirited = new Audio("audio-files/10 ano hi no kawa (spirited away).mp3") 
+// Prototype function to wrap native DOM play function
+//Wrapping the native DOM audio element play function and handle any autoplay errors
+Audio.prototype.play = (function(play) {
+    return function () {
+      var audio = this,
+          args = arguments,
+          promise = play.apply(audio, args);
+      if (promise !== undefined) {
+        promise.catch(_ => {
+          // Autoplay was prevented. This is optional, but add a button to start playing.
+          var el = document.createElement("button");
+          el.innerHTML = "Play Medley";
+          el.addEventListener("click", function(){play.apply(audio, args);});
+          this.parentNode.insertBefore(el, this.nextSibling)
+        });
+      }
+    };
+    })(Audio.prototype.play);
 
-var playlist = [oka, girlsky, aJourney, leTemps, genki, kiki, howls, sora, eto, ponyo, totoro, spirited]
-var current = null;
-var index = 0;
-
-function playSound() {
-    if(current === null || current.ended) {
-        //go to next
-        current = playlist[index++];
-        //check if last of playlist and return to first
-        if (index >= playlist.length)
-            index = 0;
-        //return to begin
-        current.currentTime=0;
-        //play
-        current.play();
-    }
-};
-
-setInterval(playSound, 1000)
+// Try automatically playing our audio via script. This would normally trigger and error.
+const audioElement = document.getElementById('myAudio');
+audioElement.play();

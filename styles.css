@@ -52,7 +52,8 @@ html {
 
 
 .instruction-text{
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 1rem; 
   text-align: center;
-  font-size: 12px; 
 }
 

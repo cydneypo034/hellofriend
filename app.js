@@ -70,6 +70,9 @@ Audio.prototype.play = (function(play) {
           // Autoplay was prevented. This is optional, but add a button to start playing.
           var el = document.createElement("button");
           el.innerHTML = "Play Medley";
+          el.style.position = "absolute";
+          el.style.left = "50%";
+          el.style.transform = "translateX(-50%)";
           el.addEventListener("click", function(){play.apply(audio, args);});
           this.parentNode.insertBefore(el, this.nextSibling)
         });

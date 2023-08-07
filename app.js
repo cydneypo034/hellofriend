@@ -1,9 +1,6 @@
-const musicContainer = document.getElementById('music-container');
+const musicContainer = document.getElementById('music-container')
 const audio = document.getElementById('audio');
-const progress = document.getElementById('progress');
-const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
-
 
 // list of songs
 const songs = [
@@ -58,10 +55,6 @@ const songs = [
 ]
 
 //function to play song in order of array
-function loadedSong(song) {
-    musicContainer.innerText = song;
-    audio.src = `audio-files/${song}.mp3`;
-}
 
 //clock creation
 function startTime() {    

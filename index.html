@@ -17,19 +17,19 @@
 
     <section class="hero is-large">
         <div class="hero-body">
+
+            <!--Clock-->
             <div id="clock"></div>
 
+            <!--Text-->
             <h1 class="heading-text">hello friend...</h1>
             <p class="sub-heading-text"><span class="auto-type"></span></p>
-
-            <div class="music-container">
-                <!--Music Info-->
-                <div class="music-info">
-                    <h4 id="title"></h4>
-                    <div class="progress-container" id="progress-container">
-                      <div class="progress" id="progress"></div>
-                    </div>
-                  </div>
+        
+            <!--Music Info-->
+            <div id="music-container">
+                <h4 id="title"></h4>
+                <span id="audio"></span>
+            </div>
                
             </div>
         </div>
@@ -46,8 +46,7 @@
         typeSpeed: 200,
         backSpeed: 150,
         loop: true
-  });
-  
+        });
     </script>
 
     <script src="app.js"></script>

@@ -1,7 +1,3 @@
-const musicContainer = document.getElementById('music-container')
-const audio = document.getElementById('audio');
-const title = document.getElementById('title');
-
 // list of songs
 const songs = [
     {
@@ -53,8 +49,43 @@ const songs = [
         "song": "audio-files/10 ano hi no kawa (spirited away).mp3"
     }
 ]
+const audio = document.getElementById('audio');
+const title = document.getElementById('title');
+const songsPlayed = [];
+let songIndex = 2;
 
 //function to play song in order of array
+function musicPlayer() {
+    const musicContainer = document.getElementById('music-container');
+    for(let i = 0; i < songs.length; i++){
+       const songholder = document.createElement("span");
+       songholder.setAttribute("data-id", i);
+       musicContainer.appendChild(songholder);
+    }
+}
+
+musicPlayer();
+
+loadSong(songs[songIndex]);
+function loadSong(song) {
+    title.innerText = song;
+    audio.src = `music/${song}.mp3`;
+  }
+
+// function playFunctionality() {
+//     const audioId = this.getAttribute('data-id');
+//     console.log("Song Playing: " + songs[audioId].title)
+//     title.innerHTML = "Song Playing: " + songs[audioId].title
+//     //songsPlayed.push(songs[songId].title)
+//     this.setAttribute("audio", songs[audioId].song);
+//     if(songsPlayed.length == 1){
+//         audio.play();
+//         songsPlayed = [];
+//     }
+// }
+
+//setSong.innerHTML = "Song Playing: " + song[songId].title
+//if song[songId].song == true { playSound() }
 
 //clock creation
 function startTime() {    

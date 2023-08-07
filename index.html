@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,54 +12,45 @@
     <title>My Ghibli Clock</title>
 
 </head>
+
 <body onload="startTime();">
-    <h1 class="heading-text">&#9734; MY-GHIBLI-CLOCK &#9734;</h1>
-    
-    <div id="clock"></div>
-    
-    <br />
-    <div class="gif-and-image-bank">
-        <div class="container">
-                <img src="gif-files/totoro-forestgif.gif" id="totoro-gif" class="slidedeck fade"/>
-                <img src="gif-files/ponyo-seagif.gif" id="ponyo-gif" class="slidedeck fade" />
-                <img src="gif-files/howlsmovingcastle-floatinggif.gif" id="howls-gif" class="slidedeck fade" />
-                <img src="gif-files/spiritedaway-traingif.gif" id="spiritedaway-gif" class="slidedeck fade" />
-                <img src="gif-files/princessmono-warriorgif2.gif" id="princessmono-gif" class="slidedeck fade"/>
-                <img src="gif-files/kikis-delivery-service.gif" id="kikis-gif" class="slidedeck fade" />
-                <img src="gif-files/castle-in-the-sky-castle.gif" id="castleinthesky-gif" class="slidedeck fade" />
-                <img src="gif-files/grave-of-the-fireflies-grave.gif" id="graveoffireflies-gif" class="slidedeck fade" />
-                <img src="gif-files/only-yesterdaygif.gif" id="onlyyesterday-gif" class="slidedeck fade" />
-                <img src="gif-files/whisperoftheheart-gif.gif" id="whisperheart-gif" class="slidedeck fade"/>
-                <img src="gif-files/the-wind-rises-studio-ghibli.gif" id="thewindrises-gif" class="slidedeck fade"/>
-                <img src="gif-files/the-cat-returns.gif" id="thecatreturns-gif" class="slidedeck fade"/>
-          </div>
-    </div>
 
-    <br/>
-    
-    <div class="small-instructions-text">
-        <h6 class="instruction-text">
-        press play below to listen to a medley of songs 
-        from different studio ghibli movie soundtracks. refresh the 
-        page to start from the beginning.
-        </h6>
-    </div>
+    <section class="hero is-large">
+        <div class="hero-body">
+            <h1 class="heading-text">🍂🍄 MY GHIBLI CLOCK 🍄🍂</h1>
 
-    <audio id="myAudio" autoplay>
-    <source src="audio-files/01 - oka no machi.mp3" type="audio/mp3" ></source>
-    <source src="audio-files/01 - the girl who fell from the sky.mp3" type="audio/mp3"></source>
-    <source src="audio-files/01 A Journey (A Dream of Flight).mp3" type="audio/mp3"></source>
-    <source src="audio-files/01 Le Temps Des Cerises.mp3" type="audio/mp3"></source>
-    <source src="audio-files/02 Drama Genki Ni Naresou.mp3" type="audio/mp3"></source>
-    <source src="audio-files/03 a town with an ocean view (kiki's delivery service).mp3" type="audio/mp3"></source>
-    <source src="audio-files/03 sky stroll.mp3" type="audio/mp3"></source>
-    <source src="audio-files/04 Sora Iro No Tane.mp3" type="audio/mp3"></source>
-    <source src="audio-files/05 Eto (Land Of The Impure).mp3" type="audio/mp3"></source>
-    <source src="audio-files/06 - Ponyo and Sosuke.mp3" type="audio/mp3" ></source>
-    <source src="audio-files/10 - totoro.mp3" type="audio/mp3"></source>
-    <source src="audio-files/10 ano hi no kawa (spirited away).mp3" type="audio/mp3"></source>
-    </audio>
+            <div id="clock"></div>
+
+            <div class="music-container">
+                <!--Music Info-->
+                <div class="music-info">
+                    <h4 id="title"></h4>
+                    <div class="progress-container" id="progress-container">
+                      <div class="progress" id="progress"></div>
+                    </div>
+                  </div>
+                  <!--Songs-->
+                <!-- <audio autoplay="true" onloadeddata="setHalfVolume()">
+                    <source src="audio-files/01 - oka no machi.mp3" type="audio/mp3" ></source>
+                    <source src="audio-files/01 - the girl who fell from the sky.mp3" type="audio/mp3"></source>
+                    <source src="audio-files/01 A Journey (A Dream of Flight).mp3" type="audio/mp3"></source>
+                    <source src="audio-files/01 Le Temps Des Cerises.mp3" type="audio/mp3"></source>
+                    <source src="audio-files/02 Drama Genki Ni Naresou.mp3" type="audio/mp3"></source>
+                    <source src="audio-files/03 a town with an ocean view (kiki's delivery service).mp3" type="audio/mp3"></source>
+                    <source src="audio-files/03 sky stroll.mp3" type="audio/mp3"></source>
+                    <source src="audio-files/04 Sora Iro No Tane.mp3" type="audio/mp3"></source>
+                    <source src="audio-files/05 Eto (Land Of The Impure).mp3" type="audio/mp3"></source>
+                    <source src="audio-files/06 - Ponyo and Sosuke.mp3" type="audio/mp3" ></source>
+                    <source src="audio-files/10 - totoro.mp3" type="audio/mp3"></source>
+                    <source src="audio-files/10 ano hi no kawa (spirited away).mp3" type="audio/mp3"></source>
+                    </audio> -->
+               
+            </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
+
 </body>
+
 </html>

@@ -30,56 +30,8 @@ function startTime() {
 startTime();
 
 
-function changeGif() {
-    gifSlides.setAttribute("src", gifArray[gifIndex]);
-    gifIndex++;
-    if(gifIndex >= gifArray.length) {
-        gifIndex = 0;
-    }
+function setHalfVolume() {
+    var myAudio = document.getElementById("audio");
+    myAudio.volume = 0.2;
 }
 
-let slideIndex = 0;
-showSlideDeck();
-
-function showSlideDeck(n) {
-    let i;
-    let slides = document.getElementsByClassName("slidedeck");
-   
-    for(i = 0; i < slides.length; i++){
-        slides[i].style.display = "none"
-    }
-    slideIndex++;
-    if(slideIndex > slides.length) {
-        slideIndex = 1
-    }
-
-    slides[slideIndex-1].style.display = "block";
-
-    setTimeout(showSlideDeck, 3000)
-}
-
-// Prototype function to wrap native DOM play function
-//Wrapping the native DOM audio element play function and handle any autoplay errors
-Audio.prototype.play = (function(play) {
-    return function () {
-      var audio = this,
-          args = arguments,
-          promise = play.apply(audio, args);
-      if (promise !== undefined) {
-        promise.catch(_ => {
-          // Autoplay was prevented. This is optional, but add a button to start playing.
-          var el = document.createElement("button");
-          el.innerHTML = "Play Medley";
-          el.style.position = "absolute";
-          el.style.left = "50%";
-          el.style.transform = "translateX(-50%)";
-          el.addEventListener("click", function(){play.apply(audio, args);});
-          this.parentNode.insertBefore(el, this.nextSibling)
-        });
-      }
-    };
-    })(Audio.prototype.play);
-
-// Try automatically playing our audio via script. This would normally trigger and error.
-const audioElement = document.getElementById('myAudio');
-audioElement.play();

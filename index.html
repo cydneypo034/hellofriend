@@ -17,9 +17,10 @@
 
     <section class="hero is-large">
         <div class="hero-body">
-            <h1 class="heading-text">🍂🍄 MY GHIBLI CLOCK 🍄🍂</h1>
-
             <div id="clock"></div>
+
+            <h1 class="heading-text">hello friend...</h1>
+            <p class="sub-heading-text"><span class="auto-type"></span></p>
 
             <div class="music-container">
                 <!--Music Info-->
@@ -33,6 +34,21 @@
             </div>
         </div>
     </section>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('.auto-type', {
+        strings: ['you deserve to be happy', 'drink boba always', 
+        'enjoy your ramen', 'less talk, more sleep', 'cuddle with your pet',
+        'slow down and chill', 'eat, drink, be merry', 'play a cozy game'
+        ],
+        typeSpeed: 200,
+        backSpeed: 150,
+        loop: true
+  });
+  
+    </script>
 
     <script src="app.js"></script>
 

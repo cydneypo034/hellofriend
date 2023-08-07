@@ -6,9 +6,16 @@ html {
 
 .heading-text {
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
-}
+  }
+
+  .sub-heading-text {
+    color: rgb(23, 22, 22);
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+  }
 
 #clock {
     font-family: 'Yusei Magic', sans-serif;

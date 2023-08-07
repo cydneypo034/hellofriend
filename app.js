@@ -4,6 +4,8 @@ const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 
+
+// list of songs
 const songs = [
     {
         "title": "oka no machi",
@@ -55,6 +57,12 @@ const songs = [
     }
 ]
 
+//function to play song in order of array
+function loadedSong(song) {
+    musicContainer.innerText = song;
+    audio.src = `audio-files/${song}.mp3`;
+}
+
 //clock creation
 function startTime() {    
     setTimeout(startTime, 1000)
@@ -84,11 +92,4 @@ function startTime() {
     
 }
 startTime();
-
-
-function setHalfVolume() {
-    var myAudio = document.getElementById("audio");
-    myAudio.volume = 0.2;
-}
-
 

@@ -1,5 +1,3 @@
-![ghibli clock app with slideshows](https://raw.githubusercontent.com/cydneypo034/cyddesport/master/src/components/images/ghibliclock.png)
-
 # My Ghibli Clock App
 
 The Ghibli Clock is a clock app inspired by Studio Ghibli movies involving a slideshow of Studio Ghibli movies gifs and a music medley button that the user can

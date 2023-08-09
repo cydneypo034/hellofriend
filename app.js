@@ -4,7 +4,7 @@
 // Select all the CSS elements in the HTML page
 // and assign them to a variable
 let now_playing = document.querySelector(".now-playing");
-let song_name = document.querySelector(".track-name");
+let song_name = document.querySelector(".title");
 let pause_PlayBtn = document.querySelector(".pause-n-play");
 let next_btn = document.querySelector(".next");
 let prev_btn = document.querySelector(".previous");
@@ -62,14 +62,29 @@ const songs = [
     }
 ]
 
-//load track into music player
-function loadTrack() {
+//load song into music player
+function loadSong() {
 
-    //load new track - get the current time and create path load new song
+    //clears out previous time
+    clearInterval();
+    resetValues();
+
+    //load new song - get the current time and create path load new song
     curr_time.src = songs[song_index].path;
     curr_time.load();
 
+    //update song details by updating the html's title id with 
+    //the name in the js object and
+    song_name.textContent = songs[song_index].name
+    now_playing.textContent = "playing" + [song_index + 1] + "of" + songs.length;
 
+}
+
+//clears song out of player
+function resetValues() {
+    curr_time.textContent = "00 : 00";
+    total_duration.textContent = "00 : 00";
+    seek_slider.value = 0;
 }
 
 

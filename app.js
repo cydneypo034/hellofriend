@@ -1,52 +1,40 @@
 // list of songs
 const songs = [
     {
-        "name": "oka no machi",
-        "url": "audio-files/01 - oka no machi.mp3"
+        "name": "Merry-go-round Of Life - Howl's Moving Castle",
+        "url": "audio-files/opening- merry-go-round of life.mp3"
     },
     {
-        "name": "the girl who fell from the sky",
-        "url": "audio-files/01 - the girl who fell from the sky.mp3"
+        "name": "In The Rain - Howl's Moving Castle",
+        "url": "audio-files/in the rain.mp3"
     },
     {
-        "name": "A Journey (A Dream of Flight)",
-        "url": "audio-files/01 A Journey (A Dream of Flight).mp3"
-    },
-    {
-        "name": "Le Temps Des Cerises",
-        "url": "audio-files/01 Le Temps Des Cerises.mp3"
-    },
-    {
-        "name": "Drama Genki Ni Naresou",
-        "url": "audio-files/02 Drama Genki Ni Naresou.mp3"
-    },
-    {
-        "name": "a town with an ocean view (kiki's delivery service)",
-        "url": "audio-files/03 a town with an ocean view (kiki's delivery service).mp3"
-    },
-    {
-        "name": "sky stroll",
-        "url": "audio-files/03 sky stroll.mp3"
-    },
-    {
-        "name": "Sora Iro No Tane",
-        "url": "audio-files/04 Sora Iro No Tane.mp3"
-    },
-    {
-        "name": "Eto (Land Of The Impure)",
+        "name": "Eto (Land Of The Impure) - Princess Mononoke",
         "url": "audio-files/05 Eto (Land Of The Impure).mp3"
     },
     {
-        "name": "Ponyo and Sosuke",
-        "url": "audio-files/06 - Ponyo and Sosuke.mp3"
+        "name": "Ponyo's Lullaby - Ponyo",
+        "url": "audio-files/18 - Ponyo's Lullaby.mp3"
     },
     {
-        "name": "Totoro",
+        "name": "A Town with an Ocean View - Kiki's Delivery Service",
+        "url": "audio-files/03 a town with an ocean view (kiki's delivery service).mp3"
+    },
+    {
+        "name": "Totoro - My Neighbor Totoro",
         "url": "audio-files/10 - totoro.mp3"
     },
     {
-        "name": "ano hi no kawa (spirited away)",
-        "url": "audio-files/10 ano hi no kawa (spirited away).mp3"
+        "name": "Tsukamori No Taiju - My Neighbor Totoro",
+        "url": "audio-files/11 - tsukamori no taiju.mp3"
+    },
+    {
+        "name": "A Shooting Star - The Wind Rises",
+        "url": "audio-files/02 A Shooting Star.mp3"
+    },
+    {
+        "name": "5AM / Sunny Weather - Animal Crossing New Horizons",
+        "url": "audio-files/1-05 500 a.m. (~Sunny Weather~).mp3"
     }
 ]
 
@@ -75,8 +63,6 @@ function startTime() {
 
     document.getElementById('clock').innerHTML = 
     hour + ':' + minute + ':' + second;
-
-    
 }
 startTime();
 

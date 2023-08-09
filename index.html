@@ -13,7 +13,6 @@
     
 
     <title>My Ghibli Clock</title>
-
 </head>
 
 <body onload="startTime();">
@@ -25,12 +24,45 @@
             <div id="clock"></div>
 
             <!--Text-->
-            <h1 class="heading-text">hello friend...</h1>
+            <h1 class="heading-text">hello friend, remember...</h1>
             <p class="sub-heading-text"><span class="auto-type"></span></p>
 
             <!--Music Info-->
             <div id="music-container">
-               
+
+                <!-- Define the section for displaying details -->
+                <div class="details">
+                    <div class="now-playing">PLAYING x OF y</div>
+                    <div id="title">Song: </div>
+                </div>
+
+                <!-- Define the section for displaying track buttons -->
+                <div class="buttons">
+                    <div class="previous">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="pause-n-play">
+                        <i class="fa-solid fa-play"></i>                    
+                    </div>
+                    <div class="next">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                </div>
+
+                <!-- Define the section for displaying the seek slider-->
+                <div class="slider">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek_slider">
+                    <div class="total-duration">00:00</div>
+                </div>
+
+                <!-- Define the section for displaying the volume slider-->
+                <div class="slider">
+                    <i class="fa-solid fa-volume-low"></i>
+                    <input type="range" min="1" max="100" value="99" class="volume_slider">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </div>
+                
             </div>
 
         </div>
@@ -41,16 +73,18 @@
 
     <script>
         var typed = new Typed('.auto-type', {
-            strings: ['you deserve to be happy', 'drink boba always', 'read your favorite book',
-                'enjoy your ramen', 'less talk, more sleep', 'cuddle with your pet',
-                'slow down', 'daydream for a while', 'play a cozy game', 'cry if you want to'
+            strings: ['you deserve to be happy', 'you are loved, heard and seen', 'order your favorite drink', 'read your favorite book', 'sing your heart out',
+                'eat something', 'go to sleep if tired', 'go outside when sad', 'cuddles make things better', 'its ok to do nothing',' its ok to cry sometimes', 
+                'its ok not to be ok', 'slow down and be calm', 'daydream for a while', 'play your favorite game', 'dont explain, just do',
+                'spend time with loved ones', 'spend time with yourself, just because'
             ],
             typeSpeed: 200,
-            backSpeed: 150,
+            backSpeed: 100,
             loop: true
         });
     </script>
 
+<script src="https://kit.fontawesome.com/02eaa6b363.js" crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
 

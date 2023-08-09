@@ -6,14 +6,14 @@ html {
 
 .heading-text {
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
   }
 
 .sub-heading-text {
     color: rgb(23, 22, 22);
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -28,6 +28,28 @@ html {
     width: 100%;
 }
 
-audio {
-  display: none;
+.music-container {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

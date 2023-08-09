@@ -51,6 +51,7 @@ i.fa-moon, i.fa-sun {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .container {

@@ -4,8 +4,8 @@
 /* Dark Mode CSS */
 html {
   background-color: antiquewhite;
-
 }
+
 .dark-mode {
   background-color: black;
   color: antiquewhite;
@@ -26,9 +26,7 @@ html {
 #DarkModetext {
   font-size: 1rem;
   font-family: 'Yusei Magic', sans-serif;
-  color: rgb(23, 22, 22);
 }
-
 
 i.fa-moon, i.fa-sun {
   padding: 25px;
@@ -53,7 +51,6 @@ i.fa-moon, i.fa-sun {
   }
 
 .sub-heading-text {
-    color: rgb(23, 22, 22);
     font-family: 'Yusei Magic', sans-serif;
     font-size: 2rem;
     text-align: center;
@@ -78,6 +75,11 @@ i.fa-moon, i.fa-sun {
 
 #title {
   font-size: 1.5rem;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.now-playing {
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 .pause-n-play,
@@ -147,6 +149,7 @@ i.fa-moon, i.fa-sun {
 .current-time,
 .total-duration {
   padding: 10px;
+  font-family: 'Yusei Magic', sans-serif;
 }
  
 i.fa-volume-low,

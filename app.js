@@ -4,7 +4,7 @@
 // Select all the CSS elements in the HTML page
 // and assign them to a variable
 let now_playing = document.querySelector(".now-playing");
-let track_name = document.querySelector(".track-name");
+let song_name = document.querySelector(".track-name");
 let pause_PlayBtn = document.querySelector(".pause-n-play");
 let next_btn = document.querySelector(".next");
 let prev_btn = document.querySelector(".previous");
@@ -15,12 +15,12 @@ let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 
 // Specify globally used values
-let track_index = 0;
+let song_index = 0;
 let isPlaying = false;
 let updateTimer;
 
 // Create the audio element for the player
-let curr_track = document.createElement('audio');
+let curr_song = document.createElement('audio');
 
 // Define the list of tracks that have to be played
 const songs = [
@@ -61,6 +61,16 @@ const songs = [
         "url": "audio-files/1-05 500 a.m. (~Sunny Weather~).mp3"
     }
 ]
+
+//load track into music player
+function loadTrack() {
+
+    //load new track - get the current time and create path load new song
+    curr_time.src = songs[song_index].path;
+    curr_time.load();
+
+
+}
 
 
 // ------------------ DARK AND LIGHT MODE//

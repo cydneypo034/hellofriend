@@ -1,4 +1,7 @@
-// Select all the elements in the HTML page
+// --------------- Variables ----------------- //
+
+// ------------------ MUSIC PLAYER //
+// Select all the CSS elements in the HTML page
 // and assign them to a variable
 let now_playing = document.querySelector(".now-playing");
 let track_name = document.querySelector(".track-name");
@@ -59,7 +62,22 @@ const songs = [
     }
 ]
 
-//clock creation
+
+// ------------------ DARK AND LIGHT MODE//
+function darkMode() {
+    let element = document.documentElement;
+    let content = document.getElementById("DarkModetext");
+    element.className = "dark-mode";
+    content.innerText = "dark mode is on";
+}
+function lightMode() {
+    let element = document.documentElement;
+    let content = document.getElementById("DarkModetext");
+    element.className = "light-mode";
+    content.innerText = "dark mode is off";
+}
+
+// ------------------ CLOCK CREATION //
 function startTime() {    
     setTimeout(startTime, 1000)
 
@@ -87,15 +105,3 @@ function startTime() {
 }
 startTime();
 
-function darkMode() {
-    let element = document.documentElement;
-    let content = document.getElementById("DarkModetext");
-    element.className = "dark-mode";
-    content.innerText = "dark mode is on";
-}
-function lightMode() {
-    let element = document.documentElement;
-    let content = document.getElementById("DarkModetext");
-    element.className = "light-mode";
-    content.innerText = "dark mode is off";
-}

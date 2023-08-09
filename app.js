@@ -83,3 +83,15 @@ function startTime() {
 }
 startTime();
 
+function darkMode() {
+    let element = document.documentElement;
+    let content = document.getElementById("DarkModetext");
+    element.className = "dark-mode";
+    content.innerText = "dark mode is on";
+}
+function lightMode() {
+    let element = document.documentElement;
+    let content = document.getElementById("DarkModetext");
+    element.className = "light-mode";
+    content.innerText = "dark mode is off";
+}

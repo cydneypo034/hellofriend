@@ -7,18 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
 
-
     <link rel="stylesheet" type="text/css" href="styles.css" />
-
-    
 
     <title>My Ghibli Clock</title>
 </head>
 
 <body onload="startTime();">
 
-    <section class="hero is-large">
+    <section class="hero is-medium">
         <div class="hero-body">
+
+            <div id="toggle-dark-light">
+                <h3 id="DarkModetext">dark mode is off</h3>
+                <i class="fa-solid fa-moon" onclick="darkMode()"></i>
+                <i class="fa-solid fa-sun" onclick="lightMode()"></i>
+            </div>
+
 
             <!--Clock-->
             <div id="clock"></div>
@@ -31,8 +35,8 @@
             <div id="music-container">
 
                 <div class="details">
-                    <div class="now-playing">PLAYING x OF y</div>
-                    <div id="title">Song: </div>
+                    <div class="now-playing">playing x of y</div>
+                    <div id="title">song: </div>
                 </div>
 
                 <div class="buttons">
@@ -40,7 +44,7 @@
                         <i class="fa-solid fa-backward-step"></i>
                     </div>
                     <div class="pause-n-play">
-                        <i class="fa-solid fa-play"></i>                    
+                        <i class="fa-solid fa-play"></i>
                     </div>
                     <div class="next">
                         <i class="fa-solid fa-forward-step"></i>
@@ -58,7 +62,7 @@
                     <input type="range" min="1" max="100" value="99" class="volume_slider">
                     <i class="fa-solid fa-volume-high"></i>
                 </div>
-                
+
             </div>
 
         </div>
@@ -70,7 +74,7 @@
     <script>
         var typed = new Typed('.auto-type', {
             strings: ['you deserve to be happy', 'you are loved, heard and seen', 'order your favorite drink', 'read your favorite book', 'sing your heart out',
-                'eat something', 'go to sleep if tired', 'go outside when sad', 'cuddles make things better', 'its ok to do nothing',' its ok to cry sometimes', 
+                'eat something', 'go to sleep if tired', 'go outside when sad', 'cuddles make things better', 'its ok to do nothing', ' its ok to cry sometimes',
                 'its ok not to be ok', 'slow down and be calm', 'daydream for a while', 'play your favorite game', 'dont explain, just do',
                 'spend time with loved ones', 'spend time with yourself, just because'
             ],
@@ -80,7 +84,7 @@
         });
     </script>
 
-<script src="https://kit.fontawesome.com/02eaa6b363.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/02eaa6b363.js" crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
 

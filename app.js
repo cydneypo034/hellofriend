@@ -1,3 +1,20 @@
+let now_playing = document.querySelector(".now-playing");
+let track_name = document.querySelector(".track-name");
+let pause_PlayBtn = document.querySelector(".pause-n-play");
+let next_btn = document.querySelector(".next");
+let prev_btn = document.querySelector(".previous");
+
+let seek_slider = document.querySelector(".seek_slider");
+let volume_slider = document.querySelector(".volume_slider");
+let curr_time = document.querySelector(".current-time");
+let total_duration = document.querySelector(".total-duration");
+
+let track_index = 0;
+let isPlaying = false;
+let updateTimer;
+
+let curr_track = document.createElement('audio');
+
 // list of songs
 const songs = [
     {

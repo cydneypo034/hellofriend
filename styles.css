@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+/* Dark Mode CSS */
 html {
   background-color: antiquewhite;
+
 }
 .dark-mode {
   background-color: black;
@@ -14,6 +16,36 @@ html {
   color: black;
 }
 
+#toggle-dark-light{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#DarkModetext {
+  font-size: 1rem;
+  font-family: 'Yusei Magic', sans-serif;
+  color: rgb(23, 22, 22);
+}
+
+
+i.fa-moon, i.fa-sun {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Clock CSS */
+#clock {
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* Text CSS */
 .heading-text {
     font-family: 'Yusei Magic', sans-serif;
     font-size: 3rem;
@@ -26,38 +58,6 @@ html {
     font-size: 2rem;
     text-align: center;
   }
-
-#clock {
-    font-family: 'Yusei Magic', sans-serif;
-    font-size: 4rem;
-    text-align: center;
-}
-
-#toggle-dark-light{
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#DarkModetext {
-  font-size: 2rem;
-  font-family: 'Yusei Magic', sans-serif;
-  color: rgb(23, 22, 22);
-}
-
-i.fa-moon, i.fa-sun {
-  padding: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-}
 
 /* Music Player */
 #music-container {

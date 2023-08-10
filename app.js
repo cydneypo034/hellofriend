@@ -78,6 +78,10 @@ function loadSong(song_index) {
     song_name.textContent = songs[song_index].name;
     now_playing.textContent = "playing" + [song_index + 1] + "of" + songs.length;
 
+    // set interval of 1000 milliseconds to update slider
+    updateTimer = setInterval(1000)
+
+    //move to the next song after current song is finished
     curr_song.addEventListener( "ended", nextSong);
 }
 
@@ -99,6 +103,7 @@ function pauseAndPlaySong() {
 
 //play loaded song
 function playSong() {
+    //play loaded song
     curr_song.play();
     isPlaying = true;
 
@@ -108,6 +113,7 @@ function playSong() {
 
 //pause loaded song
 function pauseSong() {
+    //pause loaded song
     curr_song.pause();
     isPlaying = false;
 
@@ -117,12 +123,30 @@ function pauseSong() {
 
 // play next song
 function nextSong() {
+
+    //go back to first track if the current one is the last in the list
+    if(song_index < songs.length - 1) {
+        song_index += 1;
+    } else {
+        song_index = 0
+    }
+
+    //load and play the new track
     loadSong(song_index);
     playSong();
 }
 
 //play previous song
 function previousSong() {
+
+    //go back to first track if the current one is the first in the list
+    if(song_index > 0) {
+        song_index -= 1
+    } else {
+        song_index = songs.length - 1
+    }
+
+    //load and play the new track
     loadSong(song_index);
     playSong();
 }

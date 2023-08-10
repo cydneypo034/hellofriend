@@ -26,7 +26,7 @@ let curr_song = document.createElement('audio');
 const songs = [
     {
         "name": "Merry-go-round Of Life - Howl's Moving Castle",
-        "url": "audio-files/opening- merry-go-round of life.mp3"
+        "url": "audio-files/01 -opening- merry-go-round of life.mp3"
     },
     {
         "name": "In The Rain - Howl's Moving Castle",
@@ -70,15 +70,15 @@ function loadSong(song_index) {
     resetValues();
 
     //load new song - get the current time and create path load new song
-    curr_time.src = songs[song_index].path;
-    curr_time.load();
+    curr_song.src = songs[song_index].url;
+    curr_song.load();
 
     //update song details by updating the html's title id with 
-    //the name in the js object and
-    song_name.textContent = songs[song_index].name
+    //the name in the js object and creating the now playing feature
+    song_name.textContent = songs[song_index].name;
     now_playing.textContent = "playing" + [song_index + 1] + "of" + songs.length;
 
-
+    curr_song.addEventListener( "ended", nextSong);
 }
 
 //clears song out of player

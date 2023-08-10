@@ -30,7 +30,7 @@ const songs = [
     },
     {
         "name": "In The Rain - Howl's Moving Castle",
-        "url": "audio-files/in the rain.mp3"
+        "url": "audio-files/12 in the rain.mp3"
     },
     {
         "name": "Eto (Land Of The Impure) - Princess Mononoke",
@@ -79,7 +79,7 @@ function loadSong(song_index) {
     now_playing.textContent = "playing" + [song_index + 1] + "of" + songs.length;
 
     // set interval of 1000 milliseconds to update slider
-    updateTimer = setInterval(1000)
+    updateTimer = setInterval(seekUpdate, 1000)
 
     //move to the next song after current song is finished
     curr_song.addEventListener( "ended", nextSong);
@@ -178,6 +178,22 @@ function seekUpdate() {
     }
 }
 
+function seekTo() {
+    // Calculate the seek position by the
+    // percentage of the seek slider
+    // and get the relative duration to the track
+    seekto = curr_song.duration * (seek_slider.value / 100);
+   
+    // Set the current track position to the calculated seek position
+    curr_song.currentTime = seekto;
+  }
+   
+  function setVolume() {
+    // Set the volume according to the
+    // percentage of the volume slider set
+    curr_song.volume = volume_slider.value / 100;
+  }
+
 loadSong(song_index);
 
 // ------------------ DARK AND LIGHT MODE//
@@ -221,4 +237,3 @@ function startTime() {
     hour + ':' + minute + ':' + second;
 }
 startTime();
-

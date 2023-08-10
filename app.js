@@ -63,10 +63,10 @@ const songs = [
 ]
 
 //load song into music player
-function loadSong() {
+function loadSong(song_index) {
 
     //clears out previous time
-    clearInterval();
+    clearInterval(updateTimer);
     resetValues();
 
     //load new song - get the current time and create path load new song
@@ -78,6 +78,7 @@ function loadSong() {
     song_name.textContent = songs[song_index].name
     now_playing.textContent = "playing" + [song_index + 1] + "of" + songs.length;
 
+
 }
 
 //clears song out of player
@@ -87,6 +88,46 @@ function resetValues() {
     seek_slider.value = 0;
 }
 
+//switch between play and pause
+function pauseAndPlaySong() {
+    if(!isPlaying) {
+        playSong();
+    } else {
+        pauseSong();
+    }
+}
+
+//play loaded song
+function playSong() {
+    curr_song.play();
+    isPlaying = true;
+
+    //replace with pause button
+    pause_PlayBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+}
+
+//pause loaded song
+function pauseSong() {
+    curr_song.pause();
+    isPlaying = false;
+
+    //replace with play button
+    pause_PlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+}
+
+// play next song
+function nextSong() {
+    loadSong(song_index);
+    playSong();
+}
+
+//play previous song
+function previousSong() {
+    loadSong(song_index);
+    playSong();
+}
+
+loadSong(song_index);
 
 // ------------------ DARK AND LIGHT MODE//
 function darkMode() {

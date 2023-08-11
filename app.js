@@ -76,7 +76,7 @@ function loadSong(song_index) {
     //update song details by updating the html's title id with 
     //the name in the js object and creating the now playing feature
     song_name.textContent = songs[song_index].name;
-    now_playing.textContent = "playing" + [song_index + 1] + "of" + songs.length;
+    now_playing.textContent = "playing " + [song_index + 1] + " of " + songs.length;
 
     // set interval of 1000 milliseconds to update slider
     updateTimer = setInterval(seekUpdate, 1000)
@@ -95,31 +95,21 @@ function resetValues() {
 //switch between play and pause
 function pauseAndPlaySong() {
     if(!isPlaying) {
-        playSong();
+        curr_song.play();
+        //pause_PlayBtn.innerHTML = "<i class='fa-solid fa-pause'></i>"
+
     } else {
-        pauseSong();
+        curr_song.pause();
+        //pause_PlayBtn.innerHTML = "<i class='fa-solid fa-play'></i>"
     }
 }
 
-//play loaded song
-function playSong() {
-    //play loaded song
-    curr_song.play();
+curr_song.onplaying = function() {
     isPlaying = true;
-
-    //replace with pause button
-    pause_PlayBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-}
-
-//pause loaded song
-function pauseSong() {
-    //pause loaded song
-    curr_song.pause();
+  };
+curr_song.onpause = function() {
     isPlaying = false;
-
-    //replace with play button
-    pause_PlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-}
+  };
 
 // play next song
 function nextSong() {

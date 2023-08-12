@@ -93,22 +93,27 @@ function resetValues() {
 }
 
 //switch between play and pause
-function pauseAndPlaySong() {
+function playSong() {
     if(!isPlaying) {
         curr_song.play();
-        //pause_PlayBtn.innerHTML = "<i class='fa-solid fa-pause'></i>"
-
-    } else {
-        curr_song.pause();
-        //pause_PlayBtn.innerHTML = "<i class='fa-solid fa-play'></i>"
+        console.log("I play: " + songs[song_index].name)
     }
 }
 
-curr_song.onplaying = function() {
+function pauseSong() {
+    if(isPlaying) {
+        curr_song.pause();
+        console.log("I pause: " + songs[song_index].name)
+    }
+}
+
+curr_song.onplay = function() {
     isPlaying = true;
+    pause_PlayBtn.innerHTML = "<i class='fa-solid fa-pause'></i>"
   };
 curr_song.onpause = function() {
     isPlaying = false;
+    pause_PlayBtn.innerHTML = "<i class='fa-solid fa-check'></i>"
   };
 
 // play next song
@@ -123,7 +128,9 @@ function nextSong() {
 
     //load and play the new track
     loadSong(song_index);
-    playSong();
+    curr_song.play();
+    curr_song.pause();
+
 }
 
 //play previous song
@@ -138,7 +145,9 @@ function previousSong() {
 
     //load and play the new track
     loadSong(song_index);
-    playSong();
+    curr_song.play();
+    curr_song.pause();
+
 }
 
 //updating the seek slider

@@ -97,11 +97,7 @@ function playSong() {
     if(!isPlaying) {
         curr_song.play();
         console.log("I play: " + songs[song_index].name)
-    }
-}
-
-function pauseSong() {
-    if(isPlaying) {
+    } else {
         curr_song.pause();
         console.log("I pause: " + songs[song_index].name)
     }
@@ -109,11 +105,11 @@ function pauseSong() {
 
 curr_song.onplay = function() {
     isPlaying = true;
-    pause_PlayBtn.innerHTML = "<i class='fa-solid fa-pause'></i>"
+    pause_PlayBtn.innerHTML = "<div class='pause-n-play'> <i class='fa-solid fa-pause' onclick='playSong()'></i></div>"
   };
 curr_song.onpause = function() {
     isPlaying = false;
-    pause_PlayBtn.innerHTML = "<i class='fa-solid fa-check'></i>"
+    pause_PlayBtn.innerHTML = "<div class='pause-n-play'> <i class='fa-solid fa-play' onclick='playSong()'></i></div>"
   };
 
 // play next song
@@ -128,9 +124,7 @@ function nextSong() {
 
     //load and play the new track
     loadSong(song_index);
-    curr_song.play();
-    curr_song.pause();
-
+    playSong();
 }
 
 //play previous song
@@ -145,9 +139,7 @@ function previousSong() {
 
     //load and play the new track
     loadSong(song_index);
-    curr_song.play();
-    curr_song.pause();
-
+    playSong();
 }
 
 //updating the seek slider
